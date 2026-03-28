@@ -1,0 +1,215 @@
+═══════════════════════════════════════════════════════════════════════════════
+  
+  🚀 GET STARTED IN 5 MINUTES
+  
+═══════════════════════════════════════════════════════════════════════════════
+
+
+STEP 1: Install Python (if not already installed)
+───────────────────────────────────────────────────────────────────────────────
+
+• Go to: https://www.python.org/downloads/
+• Download latest version (3.9 or higher recommended)
+• Run installer
+• ✓ IMPORTANT: Check "Add Python to PATH" during installation
+• Click "Install Now"
+
+
+STEP 2: Install OSINT Tool Dependencies
+───────────────────────────────────────────────────────────────────────────────
+
+OPTION A - Windows Users (Easiest):
+1. Locate: run.bat (in project folder)
+2. Double-click it
+3. Wait for installation (1-2 minutes)
+4. Tool launches automatically ✓
+
+OPTION B - All Users (Command Line):
+1. Open terminal/command prompt
+2. Navigate to project folder:
+   cd "C:\Users\niran\OneDrive\Desktop\New folder (3)"
+3. Run command:
+   pip install -r requirements.txt
+4. Wait for completion (you'll see "Successfully installed")
+
+
+STEP 3: Verify Installation
+───────────────────────────────────────────────────────────────────────────────
+
+Run this command:
+  python -c "import requests, dns, whois; print('✓ All good!')"
+
+If you see: ✓ All good!
+  Then you're ready to go!
+
+If you see: ModuleNotFoundError
+  Then run Step 2 again
+
+
+STEP 4: Launch the Tool
+───────────────────────────────────────────────────────────────────────────────
+
+Run this command:
+  python osint_tool.py
+
+A window should appear with the OSINT Tool GUI
+
+
+STEP 5: Try Your First Scan
+───────────────────────────────────────────────────────────────────────────────
+
+1. In the "Enter Website URL" field, type: github.com
+
+2. Click the "▶ Start Scan" button
+
+3. Watch the progress bar fill up (should take 2-5 minutes)
+
+4. You'll see results appearing in the different tabs:
+   • Summary - Overview of findings
+   • Domain Info - Registration details
+   • Network Info - IP and SSL details
+   • Web Analysis - Technologies detected
+   • Subdomains - Related domains found
+   • Emails - Email addresses extracted
+   • DNS Records - Complete DNS info
+   • Raw Data - Complete JSON output
+
+5. Your scan is complete! ✓
+
+
+STEP 6: Export Your Report
+───────────────────────────────────────────────────────────────────────────────
+
+PDF Report (Professional Format):
+1. Click "📑 Export to PDF" button
+2. Choose where to save
+3. Click "Save"
+4. Your report is ready! Open it with any PDF reader
+
+JSON Export (Raw Data):
+1. Click "📄 Export to JSON" button
+2. Choose where to save
+3. Click "Save"
+4. You can now use this data with other tools
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+COMMON TARGETS TO TRY:
+
+✓ github.com          - Well-documented, lots of data
+✓ google.com          - Global company, comprehensive results
+✓ wikipedia.org       - Non-profit organization
+✓ github.io           - Smaller domain for comparison
+✓ Your own website    - Test on something you own
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+WHAT IF SOMETHING GOES WRONG?
+
+"Python not found"
+→ Install Python from https://www.python.org
+
+"ModuleNotFoundError"
+→ Run: pip install -r requirements.txt
+→ Then: pip install --upgrade pip
+
+"Connection error"
+→ Check your internet connection
+→ Try a different domain
+→ Wait a moment and try again
+
+"Scan takes too long"
+→ This is normal (2-5 minutes)
+→ Don't stop the scan, let it complete
+→ Larger websites take longer
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+UNDERSTANDING YOUR RESULTS:
+
+Domain Information:
+→ Who owns the domain and where it's registered
+
+Network Information:
+→ IP address where the website is hosted
+→ SSL certificate details (security)
+
+Web Analysis:
+→ What technologies and tools the website uses
+→ Server software and frameworks
+
+Subdomains:
+→ Related domains (api.example.com, mail.example.com, etc.)
+
+Emails:
+→ Contact email addresses found on the website
+
+DNS Records:
+→ Technical routing information for the domain
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+ADVANCED FEATURES:
+
+Multi-Tab Interface:
+→ Each tab shows different type of information
+→ Scroll through tabs to explore all findings
+
+Real-Time Progress:
+→ Status bar shows current operation
+→ Progress indicator shows completion percentage
+
+One-Click Export:
+→ Export professional PDF reports
+→ Export raw JSON data for analysis
+→ Save multiple reports
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+NEXT STEPS:
+
+1. Try scanning a few different websites
+2. Compare the reports
+3. Read README.md for more details
+4. Check USAGE_GUIDE.md for advanced techniques
+5. Explore the code to understand how it works
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+LEGAL REMINDER:
+
+⚠️  Only scan websites you own or have explicit permission to scan
+
+✓ You can scan your own websites
+✓ You can participate in authorized bug bounty programs
+✓ You can scan sites for educational purposes (on test servers)
+
+✗ DO NOT scan other people's websites without permission
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+QUESTIONS?
+
+Check these files:
+• README.md           - Full documentation
+• USAGE_GUIDE.md      - Examples and tutorials
+• INSTALLATION.md     - Setup help
+• PROJECT_SUMMARY.txt - Feature overview
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+You're all set! 🎉
+
+Ready to gather intelligence? 
+
+Run: python osint_tool.py
+
+═══════════════════════════════════════════════════════════════════════════════

@@ -1,0 +1,140 @@
+╔════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                ║
+║              🔧 OSINT TOOL - INSTALLATION FIX (Windows)                        ║
+║                                                                                ║
+║                     For Python 3.14 and compatibility issues                   ║
+║                                                                                ║
+╚════════════════════════════════════════════════════════════════════════════════╝
+
+
+✅ QUICK FIX APPLIED
+════════════════════════════════════════════════════════════════════════════════
+
+I've updated requirements.txt to be compatible with Python 3.14.
+The issue was with the old Pillow version - it's now fixed!
+
+
+🚀 NOW FOLLOW THESE STEPS
+════════════════════════════════════════════════════════════════════════════════
+
+OPTION 1 - EASIEST (Windows):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Close the PowerShell window
+2. Navigate to: C:\Users\niran\OneDrive\Desktop\New folder (3)
+3. Double-click: run.bat
+4. Wait for installation (2-3 minutes)
+5. Tool launches automatically ✓
+
+
+OPTION 2 - MANUAL (Command Prompt):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Open Command Prompt (cmd.exe)
+2. Navigate to project:
+   cd "C:\Users\niran\OneDrive\Desktop\New folder (3)"
+
+3. Run these commands (one at a time):
+   python -m pip install --upgrade pip setuptools wheel
+   pip install -r requirements.txt
+
+4. Launch tool:
+   python osint_tool.py
+
+
+OPTION 3 - IF YOU STILL GET ERRORS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Try manual package installation:
+
+python -m pip install requests dnspython whois certifi beautifulsoup4
+python -m pip install Pillow reportlab validators urllib3
+
+Then run:
+python osint_tool.py
+
+
+📝 WHAT WAS CHANGED
+════════════════════════════════════════════════════════════════════════════════
+
+✓ Updated Pillow from 10.0.1 to 10.1.0+ (compatible with Python 3.14)
+✓ Changed to flexible version requirements (>=) instead of exact (==)
+✓ Removed outdated/unnecessary packages
+✓ Optimized for Windows Python 3.14
+
+
+✨ AFTER INSTALLATION
+════════════════════════════════════════════════════════════════════════════════
+
+Once dependencies are installed:
+1. GUI will launch automatically
+2. Or run: python osint_tool.py
+3. Enter a URL to scan
+4. Wait 2-5 minutes
+5. Explore results
+6. Export PDF or JSON
+
+
+❓ IF IT STILL DOESN'T WORK
+════════════════════════════════════════════════════════════════════════════════
+
+Try these fixes in order:
+
+1. Upgrade pip:
+   python -m pip install --upgrade pip
+
+2. Clear pip cache:
+   pip cache purge
+
+3. Install with no binary cache:
+   pip install --no-cache-dir -r requirements.txt
+
+4. Try Python 3.12 or 3.13 if you have them
+   (Python 3.14 is very new, older Python versions are more stable)
+
+
+🎯 EXPECTED INSTALLATION TIME
+════════════════════════════════════════════════════════════════════════════════
+
+First time (downloading packages):   5-10 minutes
+Subsequent runs (cached):             <1 minute
+
+
+📦 PACKAGES BEING INSTALLED
+════════════════════════════════════════════════════════════════════════════════
+
+✓ requests          - HTTP requests
+✓ dnspython         - DNS queries
+✓ whois             - WHOIS lookups
+✓ certifi           - SSL certificates
+✓ beautifulsoup4    - HTML parsing
+✓ Pillow            - Image handling
+✓ reportlab         - PDF generation
+✓ validators        - URL validation
+✓ urllib3           - HTTP utilities
+
+
+✅ VERIFICATION
+════════════════════════════════════════════════════════════════════════════════
+
+After installation completes, verify it worked:
+
+python -c "import requests, dns, whois; print('✓ All packages installed correctly!')"
+
+If you see: ✓ All packages installed correctly!
+Then you're good to go!
+
+If you see: ModuleNotFoundError
+Then installation didn't complete, try Option 2 or 3 above
+
+
+🎉 YOU'RE READY!
+════════════════════════════════════════════════════════════════════════════════
+
+Once installation is complete:
+
+python osint_tool.py
+
+Then start scanning websites!
+
+════════════════════════════════════════════════════════════════════════════════
