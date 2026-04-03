@@ -460,7 +460,7 @@ class OSINTToolGUI:
         ttk.Label(header_frame, text="🔍 OSINT Web Reconnaissance Tool", 
                  font=("Arial", 16, "bold")).pack(side="left")
         ttk.Label(header_frame, text="v1.0", 
-                 font=("Arial", 10, "gray")).pack(side="right")
+                 font=("Arial", 10, "bold")).pack(side="right")
         
         # Input frame
         input_frame = ttk.LabelFrame(self.root, text="Target URL", padding=10)

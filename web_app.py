@@ -19,6 +19,14 @@ from osint_tool import OSINTTool
 app = Flask(__name__)
 app.secret_key = 'osint_investigation_tool_2024'
 
+# Disable caching for development
+@app.after_request
+def add_header(response):
+    response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+    response.headers['Pragma'] = 'no-cache'
+    response.headers['Expires'] = '0'
+    return response
+
 # Global scan data storage
 scan_results = {}
 
@@ -215,32 +223,10 @@ if __name__ == '__main__':
             f.write(basic_html)
         print("✓ Basic template created")
     
-    print("✓ Open your browser and go to: http://localhost:5000")
+    # Get port from environment (for Heroku) or use default
+    port = int(os.environ.get('PORT', 5000))
+    
+    print(f"✓ Open your browser and go to: http://localhost:{port}")
     print("\nPress Ctrl+C to stop the server\n")
     
-    # Try to run on available port
-    import socket
-    def is_port_free(port):
-        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-            try:
-                s.bind(('', port))
-                return True
-            except:
-                return False
-    
-    port = 5000
-    if not is_port_free(5000):
-        port = 5001
-        print(f"⚠ Port 5000 busy, using port {port}")
-        print(f"✓ Go to: http://localhost:{port}\n")
-    
-    try:
-        app.run(debug=False, host='0.0.0.0', port=port, use_reloader=False)
-    except KeyboardInterrupt:
-        print("\n\n✓ Server stopped")
-    except Exception as e:
-        print(f"\n✗ Error: {e}")
-        print("\nFor full features, use Desktop Mode instead:")
-        print("Run: python enhanced_launch.py")
-        print("Select option 2")
-        input("\nPress Enter to exit...")
+    app.run(debug=False, host='0.0.0.0', port=port, use_reloader=False)
